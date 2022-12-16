@@ -2,8 +2,12 @@
 @tailwind components;
 @tailwind utilities; */
 
-/* 
+
 .App {
+  text-align: center;
+}
+
+.Login {
   text-align: center;
 }
 
@@ -40,4 +44,4 @@
   to {
     transform: rotate(360deg);
   }
-} */
+}
