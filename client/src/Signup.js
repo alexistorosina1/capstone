@@ -1,52 +1,38 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import {Link} from "react-router-dom"
 
-function Login({ onLogin}){
 
+function Signup({setUser}){
     const [form, setForm] = useState({
         username: "",
-        password: "",
-      });
+        password : "",
+        passwordConfirmation: "",
+    })
 
-      const [errors, setErrors] = useState(null);
-
-      function handleChange(e) {
+    function handleChange(e) {
         const value = e.target.value;
         const keyName = e.target.name;
         setForm({...form, [keyName]: value })
       }
 
-      const handleSubmit = (e) =>{
+      const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(form)
-
-        fetch("/login", {
+        fetch("/signup", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify(form),
-        }) .then((r) => {
-            if (r.ok) {
+        })  .then((r) => {
+            if (r.ok){
                 r.json().then((user) => {
-                    onLogin(user)
-                    setErrors(null)
+                    setUser(user)
                 })
-            } else {
-                r.json().then(errors => setErrors(errors))
             }
         })
+      };
 
-        setForm({
-            username: "",
-            password:""
-        })
-
-      }
-    
     return(
-        <div class="form-control">
+        <div>
             <form onSubmit={handleSubmit}>
             <label class="label">
                 {/* <span class="label-text">Username</span> */}
@@ -69,12 +55,22 @@ function Login({ onLogin}){
             value={form.password}
             onChange={handleChange}
             name="password"/>
+            <label class="label">
+                {/* <span class="label-text">Password</span> */}
+            </label>
+            <input
+            class="input input-bordered" 
+            type="password" 
+            placeholder="Password Confirmation"
+            value={form.passwordConfirmation}
+            onChange={handleChange}
+            name="passwordConfirmation"/>
             <br/>
-            <button type="submit" class="btn btn-primary">Log In</button>
+            <button type="submit" class="btn btn-primary">Sign Up</button>
             </form>
-            <Link to="/signup">Create an account</Link>
         </div>
     )
 }
 
-export default Login
+
+export default Signup;
