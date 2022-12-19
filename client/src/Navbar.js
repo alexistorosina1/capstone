@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 
-function Navbar(){
+function Navbar({user, handleLogOut}){
     return (
         <nav>
             <div className="logo">
@@ -13,6 +13,7 @@ function Navbar(){
             <NavLink to="/tracker">Tracker</NavLink>
             <NavLink to="/exercises">Exercises</NavLink>
             <NavLink to="/profile">Profile</NavLink>
+            {user ? <button onClick={handleLogOut}>Log out</button> : null}
             </div>
         </nav>
     )
