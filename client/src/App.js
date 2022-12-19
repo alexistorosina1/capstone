@@ -39,7 +39,7 @@ function App() {
     return(
         <div className='App'>
             <Router>
-            <Navbar></Navbar>
+            <Navbar user={user} handleLogOut={handleLogOut}></Navbar>
                 <Routes>
                     <Route exact path="/" element={<Home user={user} onLogin={onLogin}/>}></Route>
                     <Route exact path="/login" element={<Login setUser={setUser}/>}></Route>
@@ -48,7 +48,7 @@ function App() {
                     <Route exact path="/profile" element={<Profile/>}></Route>
                     <Route exact path="/signup" element={<Signup setUser={setUser}/>}></Route>
                 </Routes>
-                {user ? <button onClick={handleLogOut}>Log out</button> : null}
+                {/* {user ? <button onClick={handleLogOut}>Log out</button> : null} */}
             </Router>
         </div>
     )
