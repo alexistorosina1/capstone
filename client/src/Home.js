@@ -1,4 +1,5 @@
 import Login from "./Login"
+import { Link } from "react-router-dom";
 
 function Home ({ user, onLogin }){
     return(
@@ -6,8 +7,8 @@ function Home ({ user, onLogin }){
             {user ? 
             <h1>Welcome Back {user.username}</h1> 
             :
-            <h1>Hello</h1> }
-            <Login onLogin={onLogin}/>
+            <Login onLogin={onLogin}/> }
+            {/* <Link to="/signup">Create an account</Link> */}
         </div>
     )
 }
