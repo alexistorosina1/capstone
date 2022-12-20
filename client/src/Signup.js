@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 function Signup({setUser}){
@@ -7,6 +8,8 @@ function Signup({setUser}){
         password : "",
         passwordConfirmation: "",
     })
+
+    const navigate = useNavigate()
 
     function handleChange(e) {
         const value = e.target.value;
@@ -26,6 +29,7 @@ function Signup({setUser}){
             if (r.ok){
                 r.json().then((user) => {
                     setUser(user)
+                    navigate("/home")
                 })
             }
         })
