@@ -2,7 +2,7 @@ import { useState } from "react";
 import TrackerTable from "./TrackerTable";
 
 
-function Tracker(){
+function Tracker({user}){
     const [rows, setRows] = useState([]);
     const [date, setDate] = useState(new Date().toDateString());
 
@@ -13,8 +13,10 @@ function Tracker(){
     return(
         <div className="tracker">
             <h1>Tracker</h1>
-            <div className="table">
+            <div className="table"> 
+                {user ? 
                 <TrackerTable rows={rows.filter((row) => row.date === date)} handleAddExercise={handleAddExercise} date={date}/>
+                : <h1>Please Log In</h1>}
             </div>
         </div>
     )
