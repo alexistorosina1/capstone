@@ -11,6 +11,7 @@ import Signup from './Signup';
 
 function App() {
     const [user, setUser] = useState(null);
+    
 
     useEffect(() => {
         fetch('/me')
@@ -27,6 +28,7 @@ function App() {
         }).then(r => {
           if (r.ok) {
             setUser(null)
+            
           }
         })
       }
@@ -48,11 +50,11 @@ function App() {
                     <Route exact path="/profile" element={<Profile/>}></Route>
                     <Route exact path="/signup" element={<Signup setUser={setUser}/>}></Route>
                 </Routes>
-                {/* {user ? <button onClick={handleLogOut}>Log out</button> : null} */}
             </Router>
         </div>
     )
 }
 
+{/* {user ? <button onClick={handleLogOut}>Log out</button> : null} */}
 
 export default App;
