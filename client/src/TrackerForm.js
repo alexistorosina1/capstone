@@ -18,7 +18,7 @@ const initialForm ={
 }
 
 
-function TrackerForm(handleAddExercise, date){
+function TrackerForm({handleAddExercise, date}){
     const [open, setOpen] = useState(false);
     const [logExercise, setLogExercise] = useState(initialForm)
 
@@ -27,6 +27,7 @@ function TrackerForm(handleAddExercise, date){
     }
 
     function handleSave (){
+        //add backend here
         handleAddExercise({...logExercise, date});
         handleClose();
     }

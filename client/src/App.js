@@ -45,7 +45,7 @@ function App() {
                 <Routes>
                     <Route exact path="/" element={<Home user={user} onLogin={onLogin}/>}></Route>
                     <Route exact path="/login" element={<Login setUser={setUser}/>}></Route>
-                    <Route exact path="/tracker" element={<Tracker/>}></Route>
+                    <Route exact path="/tracker" element={<Tracker user={user}/>}></Route>
                     <Route exact path="/exercises" element={<Exercises/>}></Route>
                     <Route exact path="/profile" element={<Profile/>}></Route>
                     <Route exact path="/signup" element={<Signup setUser={setUser}/>}></Route>
