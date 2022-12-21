@@ -76,7 +76,7 @@ function TrackerForm({handleAddExercise, date}){
                     <TextField
                     autoFocus
                     margin="dense"
-                    id="exercise"
+                    id="exercise_completed"
                     label="Exercise"
                     type="text"
                     fullWidth
