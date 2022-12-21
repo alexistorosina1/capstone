@@ -12,7 +12,7 @@ function MyCalendar({setDate}){
     
     useEffect(() => {
         setDate(value.toDate().toDateString());
-    })
+    },[])
 
     return(
         <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -22,6 +22,7 @@ function MyCalendar({setDate}){
             value={value}
             onChange={(newValue) => {
                 setValue(newValue);
+                setDate(newValue.toDate().toDateString());
             }}
             renderInput={(params) => <TextField {...params}/>}
             />

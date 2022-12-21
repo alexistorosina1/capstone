@@ -8,7 +8,7 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import TrackerForm from "./TrackerForm";
 function TrackerTable({ rows, handleAddExercise, date}){
-    console.log(rows)
+    console.log("please get passed down",rows)
     return(
         <TableContainer component={Paper}>
             <Table aria-label="simple table">
@@ -26,7 +26,7 @@ function TrackerTable({ rows, handleAddExercise, date}){
                         key={row.exercise}
                         sx={{ backgroundColor: "#dcdcdc", "&:last-child td , &:last-child th" : { border: 0 }}}
                         >
-                            <TableCell sx={{ fontSize: "2ex"}} component="th" scope="row">{row.exercise}</TableCell>
+                            <TableCell sx={{ fontSize: "2ex"}} component="th" scope="row">{row.exercise_completed}</TableCell>
                             <TableCell sx={{ fontSize: "2ex"}} align="right">{row.sets}</TableCell>
                             <TableCell sx={{ fontSize: "2ex"}} align="right">{row.reps}</TableCell>
                             <TableCell sx={{ fontSize: "2ex"}} align="right">{row.time}</TableCell>
