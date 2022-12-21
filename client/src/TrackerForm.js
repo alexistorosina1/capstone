@@ -11,7 +11,7 @@ import IconButton from "@mui/material/IconButton";
 import { useState } from "react";
 
 const initialForm ={
-    exercise: "",
+    exercise_completed: "",
     sets: "",
     reps: "",
     time: "",
@@ -19,8 +19,10 @@ const initialForm ={
 
 
 function TrackerForm({handleAddExercise, date}){
+
     const [open, setOpen] = useState(false);
     const [logExercise, setLogExercise] = useState(initialForm)
+    const [errors, setErrors] = useState(null);
 
     function handleClickOpen (){
         setOpen(true);
@@ -28,7 +30,23 @@ function TrackerForm({handleAddExercise, date}){
 
     function handleSave (){
         //add backend here
-        handleAddExercise({...logExercise, date});
+        fetch("/logexercise", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(logExercise),
+        }) .then((r) => {
+            if (r.ok) {
+                r.json().then((log) => {
+                    handleAddExercise(log)
+                    setErrors(null)
+                })
+            } else {
+                r.json().then((errors => setErrors(errors)))
+            }
+        })
+        // handleAddExercise({...logExercise, date});
         handleClose();
     }
 
