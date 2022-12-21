@@ -7,7 +7,8 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import TrackerForm from "./TrackerForm";
-function TrackerTable({ rows, handleAddExercise, date, getRows}){
+function TrackerTable({ rows, handleAddExercise, date}){
+    console.log(rows)
     return(
         <TableContainer component={Paper}>
             <Table aria-label="simple table">

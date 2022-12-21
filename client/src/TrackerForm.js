@@ -46,7 +46,7 @@ function TrackerForm({handleAddExercise, date}){
                 r.json().then((errors => setErrors(errors)))
             }
         })
-        // handleAddExercise({...logExercise, date});
+        handleAddExercise({...logExercise, date});
         handleClose();
     }
 

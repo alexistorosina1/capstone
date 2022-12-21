@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import MyCalendar from "./MyCalendar";
 import TrackerTable from "./TrackerTable";
 
 
 function Tracker({user}){
-    const [rows, setRows] = useState([]);
+    const [rows, setRows] = useState({});
     const [date, setDate] = useState(new Date().toDateString());
 
     const handleAddExercise = (exercise) => {
@@ -11,21 +12,29 @@ function Tracker({user}){
         setRows(newRows)
     }
 
-    function getRows(){
-        fetch("/getexercises")
-        .then(r => {
-            if(r.ok) {
-                r.json().then(rows => setRows(rows));
-            }
-        })
-    }
+    // function getRows(){
+    //     fetch("/getexercises")
+    //     .then(r => {
+    //         if(r.ok) {
+    //             r.json().then(rows => setRows(rows));
+    //         }
+    //     })
+    // }
 
+    useEffect(() => {
+        fetch("/workouts")
+        .then (r => r.json())
+        .then(data => setRows(data))
+    }, [])
+
+    console.log("Rows in tracker:", rows)
     return(
         <div className="tracker">
             <h1>Tracker</h1>
-            <div className="table"> 
+            <MyCalendar setDate={setDate}/>
+            <div id="table"> 
                 {user ? 
-                <TrackerTable rows={rows.filter((row) => row.date === date)} handleAddExercise={handleAddExercise} date={date} getRows={getRows}/>
+                <TrackerTable rows={rows.filter((row) => row.date === date)} handleAddExercise={handleAddExercise} date={date} />
                 : <h1>Please Log In</h1>}
             </div>
         </div>
