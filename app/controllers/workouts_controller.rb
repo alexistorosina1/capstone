@@ -1,5 +1,11 @@
 class WorkoutsController < ApplicationController
 
+    def index
+        user = User.find_by(id: session[:user_id])
+        workouts = user.workouts.all
+        render json: workouts
+    end
+
     def show
         user = User.find_by(id: session[:user_id])
         workout = user.workouts.find(session[:user_id])
