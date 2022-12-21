@@ -1,0 +1,21 @@
+class WorkoutsController < ApplicationController
+
+    def show
+        user = User.find_by(id: session[:user_id])
+        workout = user.workouts.find(session[:user_id])
+        render json: workout
+    end
+
+    def create
+        user = User.find_by(id: session[:user_id])
+        workout = user.workouts.create!(workout_params.merge(:user_id => user.id))
+        render json: workout, status: :created
+    end
+
+
+    private
+
+    def workout_params
+        params.permit(:exercise_completed, :sets, :reps, :time, :user_id)
+    end
+end
