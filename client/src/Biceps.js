@@ -5,6 +5,7 @@ function Biceps({allExercises}){
     const vidStyle = {
         width: '20%',
         height: 'auto',
+        
     }
     return(
         <div className="biceps">
@@ -12,7 +13,9 @@ function Biceps({allExercises}){
                 return(
                     <>
                         <h3>{bi.name}</h3>
-                        <video style={vidStyle}src={bi.video}></video>
+                        <video controls width="100%" style={vidStyle}>
+                            <source src={bi.video} type="video/mp4"/>
+                        </video>
                         <p>{bi.instructions}</p>
                     </>
                 )
