@@ -16,10 +16,10 @@ function Biceps({allExercises}){
                         <p>{bi.instructions}</p>
                     </>
                 )
-            })}https://im2.ezgif.com/tmp/ezgif-2-bd8b39e849.gif
+            })}
         </div>
     )
 }
 
 
-export default Biceps;
+export default Biceps; 

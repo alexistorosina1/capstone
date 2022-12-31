@@ -21,8 +21,8 @@ Muscle.create(id: 8, name: "Calves")
 
 
 # Biceps
-Exercise.create(id: 1, name: 'Dumbell Curl', video: "https://im2.ezgif.com/tmp/ezgif-2-2da526e199.gif", instructions: "Stand up straight with a dumbbell in each hand at arm's length. Raise one dumbbell and twist your forearm until it is vertical and your palm faces the shoulder. Lower to original position and repeat with opposite arm.", muscle_id: 1)
-Exercise.create(id: 2, name: "Dumbbell Hammer Curl", video: "https://im2.ezgif.com/tmp/ezgif-2-bd8b39e849.gif", instructions: "Hold the dumbbells with a neutral grip (thumbs facing the ceiling). Slowly lift the dumbbell up to chest height. Return to starting position and repeat.", muscle_id: 1)
+Exercise.create(id: 1, name: 'Dumbell Curl', video: "https://musclewiki.com/media/uploads/videos/branded/male-dumbbell-curl-front.mp4", instructions: "Stand up straight with a dumbbell in each hand at arm's length. Raise one dumbbell and twist your forearm until it is vertical and your palm faces the shoulder. Lower to original position and repeat with opposite arm.", muscle_id: 1)
+Exercise.create(id: 2, name: "Dumbbell Hammer Curl", video: "https://musclewiki.com/media/uploads/videos/branded/male-dumbbell-hammer-curl-front.mp4", instructions: "Hold the dumbbells with a neutral grip (thumbs facing the ceiling). Slowly lift the dumbbell up to chest height. Return to starting position and repeat.", muscle_id: 1)
 
 # Tricpes
 Exercise.create(id: 3, name: "Dumbbell Skullcrusher", video: "https://musclewiki.com/media/uploads/videos/branded/male-dumbbell-skullcrusher-front_XhMR7N7.mp4", instructions: "Lay flat on the floor or a bench with your fists extended to the ceiling and a neutral grip. Break at the elbows until your fists are by your temples. Then extend your elbows and flex your tricep at the top.", muscle_id: 2)
