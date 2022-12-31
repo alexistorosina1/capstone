@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :exercises
+  resources :muscles
   resources :workouts
   resources :users, only: [:create, :show]
   # Routing logic: fallback requests for React Router.
