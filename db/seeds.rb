@@ -18,7 +18,10 @@ Muscle.create(id: 5, name: "Abdominal")
 Muscle.create(id: 6, name: "Quads")
 Muscle.create(id: 7, name: "Hamstrings")
 Muscle.create(id: 8, name: "Calves")
+Muscle.create(id: 9, name: "Shoulders")
+Muscle.create(id: 10, name: "Lats")
 
+## not using Tricpes and Hamstrings 
 
 # Biceps
 Exercise.create(id: 1, name: 'Dumbell Curl', video: "https://musclewiki.com/media/uploads/videos/branded/male-dumbbell-curl-front.mp4", instructions: "Stand up straight with a dumbbell in each hand at arm's length. Raise one dumbbell and twist your forearm until it is vertical and your palm faces the shoulder. Lower to original position and repeat with opposite arm.", muscle_id: 1)
@@ -56,3 +59,11 @@ Exercise.create(id: 18, name: "Dumbbell Goblet Good Morning", video: "https://mu
 #Calves
 Exercise.create(id: 19, name: "Dumbbell Calf Raise", video: "https://musclewiki.com/media/uploads/videos/branded/male-dumbbell-calf-raise-side.mp4", instructions: "Stand tall with your feet on the ground. You can put the the balls of your feet on top of a plate to extend the range of motion. Imagine you have a string attached to your heels and pull your heels up toward the ceiling.", muscle_id: 8)
 Exercise.create(id: 20, name: "Barbell Calf Raises", video: "https://musclewiki.com/media/uploads/videos/branded/male-barbell-calve-raise-side.mp4", instructions: "Place the bar on your back, start with feet flat on the ground. Extend your heels upwards while keeping your knees stationary, and pause at the contracted position. Slowly return to the starting position. Repeat.", muscle_id: 8)
+
+#Shoulders
+Exercise.create(id: 21, name: "Dumbbell Seated Overhead Press", video: "https://musclewiki.com/media/uploads/videos/branded/male-dumbbell-seated-overhead-press-front.mp4#t=0.1", instructions: "Sit on a bench with back support. Raise the dumbbells to shoulder height with your palms forward. Raise the dumbbells upwards and pause at the contracted position. Lower the weights back to starting position.", muscle_id: 9)
+Exercise.create(id: 22, name: "Dumbbell Lateral Raise", video: "https://musclewiki.com/media/uploads/videos/branded/male-dumbbell-lateral-raise-front.mp4#t=0.1", instructions: "Stand up straight with dumbbells at either side, palms facing your hips. Raise your arms on either side with a slight bend in your elbow until they are parallel with the floor. Pause at the top of the motion. Slowly return your arms down to starting position.", muscle_id: 9)
+
+#Lats
+Exercise.create(id:23, name: "Bent Over Barbell Row", video: "https://musclewiki.com/media/uploads/videos/branded/male-barbell-bent-over-row-front.mp4#t=0.1", instructions: "Grab a barbell with a shoulder width pronated or supinated grip. Bend forward at your hips while maintaining a flat back. Pull the weight toward your upper abdomen. Lower the weight in a controlled manner and repeat.", muscle_id: 10)
+Exercise.create(id: 24, name: "Cable Pullover", video: "https://musclewiki.com/media/uploads/videos/branded/male-cable-pullover-side.mp4#t=0.1",instructions: "You can use any attachment. Cable should be set all the way to the top of the machine. Grab your attachment and walk a few steps back. Push your butt back to where you are leaning forward somewhat. Initiate the movement with your shoulders and not your elbows. Imagine trying to pull the attachment through your thighs at the bottom", muscle_id: 10)

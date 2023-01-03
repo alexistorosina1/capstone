@@ -1,4 +1,5 @@
 import react, { useEffect, useState } from 'react';
+// import {  } from './assets.svg'
 import Biceps from './Biceps';
 
 function Exercises(){
@@ -16,7 +17,7 @@ function Exercises(){
     
     return(
         <div className="exercises">
-            <Biceps allExercises={allExercises}/>
+            {/* <Biceps allExercises={allExercises}/> */}
         </div>
     )
 }
