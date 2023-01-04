@@ -1,5 +1,5 @@
 import react, { useEffect, useState } from 'react';
-// import {  } from './assets.svg'
+// import { assets } from './Male/assets.svg'
 import Biceps from './Biceps';
 
 function Exercises(){
@@ -17,7 +17,8 @@ function Exercises(){
     
     return(
         <div className="exercises">
-            {/* <Biceps allExercises={allExercises}/> */}
+            <img src={require("./Male/assets.svg").default} id="asset" />
+            <Biceps allExercises={allExercises}/>
         </div>
     )
 }
