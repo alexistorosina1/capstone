@@ -15,7 +15,7 @@ function Exercises() {
 
   return (
     <div
-      className="exercises"
+      className="main-container"
       id="exercise-container"
       style={{
         height: "800px",

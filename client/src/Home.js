@@ -54,11 +54,11 @@ function Home ({ user, onLogin }){
 
   return (
     <div class="main-container">
-      {user ? 
+      {/* {user ? 
         <h1 class="text-right text-sky-400">Welcome back {user.username}</h1>
        : 
         <></>
-      }
+      } */}
       <div >
         {user ? 
           <span class="quotes-container">
