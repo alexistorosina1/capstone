@@ -15,8 +15,8 @@ function Biceps({ allExercises }) {
   }
   return (
     <div style={centerCard} class="flex flex-col space-y-4 ...">
-        <svg src={bicepSvg} id="biceps"/> 
-      {allExercises.slice(0, 2).map((bi) => {
+        {/* <svg src={bicepSvg} id="biceps"/>  */}
+      {allExercises.map((bi) => {
           return (
               <div class="max-w-sm rounded overflow-hidden shadow-lg">
             <video class="w-full" controls width="100%" style={vidStyle}>

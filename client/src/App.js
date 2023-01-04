@@ -6,7 +6,6 @@ import Home from './Home';
 import Navbar from './Navbar';
 import Tracker from './Tracker';
 import Exercises from './Exercises';
-import Profile from './Profile';
 import Signup from './Signup';
 
 function App() {
@@ -47,7 +46,6 @@ function App() {
                     <Route exact path="/login" element={<Login setUser={setUser}/>}></Route>
                     <Route exact path="/tracker" element={<Tracker user={user}/>}></Route>
                     <Route exact path="/exercises" element={<Exercises/>}></Route>
-                    <Route exact path="/profile" element={<Profile/>}></Route>
                     <Route exact path="/signup" element={<Signup setUser={setUser}/>}></Route>
                 </Routes>
             </Router>
