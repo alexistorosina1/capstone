@@ -12,7 +12,6 @@ function Navbar({user, handleLogOut}){
             <NavLink to="/">Home</NavLink>
             <NavLink to="/tracker">Tracker</NavLink>
             <NavLink to="/exercises">Exercises</NavLink>
-            <NavLink to="/profile">Profile</NavLink>
             {user ? <button onClick={handleLogOut}>Log out</button> : null}
             </div>
         </nav>

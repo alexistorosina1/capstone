@@ -30,8 +30,15 @@ function Tracker({user}){
 
     console.log("Rows in tracker:", rows)
 
+    function updateRows(rowDeleted) {
+        const rowsAfterDelete = rows.filter(row => row.id !== rowDeleted);
+        setRows(rowsAfterDelete)
+    }
+
     function deleteRows(){
-        fetch()
+        fetch(`/workouts/${rows.id}`, {
+            method: "DELETE",
+        }).then(updateRows(rows.id))
     }
     return(
         <div className="tracker">
@@ -39,7 +46,7 @@ function Tracker({user}){
             <MyCalendar setDate={setDate}/>
             <div id="table"> 
                 {user ? 
-                <TrackerTable 
+                <TrackerTable deleteRows={deleteRows}
                 rows={rows.filter((row) => {
                     // console.log("date:", date)
                     // console.log("using dayjs:", dayjs(new Date(row.created_at)))

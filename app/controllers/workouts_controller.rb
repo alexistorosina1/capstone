@@ -18,6 +18,13 @@ class WorkoutsController < ApplicationController
         render json: workout, status: :created
     end
 
+    def destroy
+        user = User.find_by(id: session[:user_id])
+        workout = user.workouts.find(params[:id])
+        workout.destroy
+        head :no_content
+    end
+
 
     private
 
