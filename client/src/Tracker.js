@@ -41,7 +41,7 @@ function Tracker({user}){
         }).then(updateRows(rows.id))
     }
     return(
-        <div className="tracker">
+        <div className="main-container">
             <h1>Tracker</h1>
             <MyCalendar setDate={setDate}/>
             <div id="table"> 
