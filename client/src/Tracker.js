@@ -27,7 +27,12 @@ function Tracker({user}){
         .then (r => r.json())
         .then(data => setRows(data))
     }, [])
+
     console.log("Rows in tracker:", rows)
+
+    function deleteRows(){
+        fetch()
+    }
     return(
         <div className="tracker">
             <h1>Tracker</h1>

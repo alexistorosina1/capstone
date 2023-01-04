@@ -1,3 +1,6 @@
+import bicepSvg from './Male/Bicep.svg';
+
+
 function Biceps({ allExercises }) {
   console.log(allExercises);
   const vidStyle = {
@@ -12,9 +15,10 @@ function Biceps({ allExercises }) {
   }
   return (
     <div style={centerCard} class="flex flex-col space-y-4 ...">
+        <svg src={bicepSvg} id="biceps"/> 
       {allExercises.slice(0, 2).map((bi) => {
-        return (
-          <div class="max-w-sm rounded overflow-hidden shadow-lg">
+          return (
+              <div class="max-w-sm rounded overflow-hidden shadow-lg">
             <video class="w-full" controls width="100%" style={vidStyle}>
               <source src={bi.video} type="video/mp4"/>
             </video>

@@ -30,6 +30,9 @@ function TrackerTable({ rows, handleAddExercise, date}){
                             <TableCell sx={{ fontSize: "2ex"}} align="right">{row.sets}</TableCell>
                             <TableCell sx={{ fontSize: "2ex"}} align="right">{row.reps}</TableCell>
                             <TableCell sx={{ fontSize: "2ex"}} align="right">{row.time}</TableCell>
+                            <TableCell sx={{ fontSize: "2ex"}} align="right">
+                            <button sx={{ fontSize: "2ex"}} align="right">🗑️</button>
+                            </TableCell>
                         </TableRow>
                     ))}
                 </TableBody>

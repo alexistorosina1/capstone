@@ -36,7 +36,7 @@ function Signup({setUser}){
       };
 
     return(
-        <div>
+        <div class="main-container">
             <form onSubmit={handleSubmit}>
             <label class="label">
                 {/* <span class="label-text">Username</span> */}

@@ -15,6 +15,31 @@
   text-align: right;
 }
 
+#asset {
+  margin: auto;
+}
+
+#bicep {
+  margin: auto;
+}
+
+.main-container {
+  background-image: url("https://images.wallpaperscraft.com/image/single/gym_dumbbells_inventory_219519_3840x2400.jpg");
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  background-size:contain;
+  background-position: center;
+}
+
+.quotes-container {
+  color: white;
+  width: 400px;
+  margin: 10px;
+  text-align: left;
+  line-height: 75px;
+  font-size: 30px;
+}
 
 
 
