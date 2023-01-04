@@ -59,7 +59,7 @@ function Home ({ user, onLogin }){
        : 
         <></>
       } */}
-      <div >
+      <div className="lg-container">
         {user ? 
           <span class="quotes-container">
             <p class="text-xl italic font-semibold text-white dark:text-white">

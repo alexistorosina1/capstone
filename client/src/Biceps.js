@@ -12,6 +12,7 @@ function Biceps({ allExercises }) {
     margin: "auto",
     width: "30%",
     display: "center",
+    color: "white",
   }
   return (
     <div style={centerCard} class="flex flex-col space-y-4 ...">
@@ -24,12 +25,7 @@ function Biceps({ allExercises }) {
             </video>
             <div class="px-6 py-4">
               <div class="font-bold text-xl mb-2">{bi.name}</div>
-              <p class="text-gray-700 text-base">{bi.instructions}</p>
-            </div>
-            <div class="px-6 pt-4 pb-2">
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #biceps
-              </span>
+              <p class="text-white-700 text-base">{bi.instructions}</p>
             </div>
           </div>
         );

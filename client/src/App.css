@@ -29,7 +29,7 @@
   min-width: 100%;
   min-height: 100%;
   background-size:contain;
-  background-position: center;
+  background-position: center; 
 }
 
 .quotes-container {
@@ -41,5 +41,11 @@
   font-size: 30px;
 }
 
-
-
+.lg-container {
+  position: relative;
+  height: 50vh;
+  padding-left: 20px;
+  padding-right: 10px;
+  padding-bottom: 40px;
+  width: 300px;
+}
