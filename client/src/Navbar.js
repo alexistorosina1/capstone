@@ -6,7 +6,7 @@ function Navbar({user, handleLogOut}){
     return (
         <nav class="bg-black border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
   <div class="container flex flex-wrap items-center justify-between mx-auto">
-    <a href="https://flowbite.com/" class="flex items-center">
+    <a href="http://localhost:4000/" class="flex items-center">
         <img src="https://pbs.twimg.com/card_img/1608964395492671488/AviZ5NIu?format=png&name=360x360" class="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
         <span class="self-center text-white font-semibold whitespace-nowrap dark:text-white">REPS</span>
     </a>

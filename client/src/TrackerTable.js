@@ -11,10 +11,19 @@ function TrackerTable({ rows, handleAddExercise, date, deleteRows }) {
   console.log("please get passed down", rows);
 
   return (
-    <div class="relative overflow-x-auto">
+    <div style={{
+        margin: "auto",
+        height:"400px",
+        width:"640px",
+        top:"50px",
+        left:"1px",
+        borderRadius: "30px"
+
+    }}
+    class="relative overflow-x-auto">
       <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-          <tr>
+          <tr >
             <th scope="col" class="px-6 py-3">
               Exercise
             </th>
@@ -32,9 +41,9 @@ function TrackerTable({ rows, handleAddExercise, date, deleteRows }) {
             </th>
           </tr>
         </thead>
-        <tbody>
+        <tbody >
           {rows.map((row) => (
-            <tr
+            <tr 
               class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
               key={row.id}
             >

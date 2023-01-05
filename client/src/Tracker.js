@@ -43,14 +43,13 @@ function Tracker({ user }) {
   }
   return (
     <div className="main-container">
-      <h1>Tracker</h1>
       <MyCalendar setDate={setDate} />
       <div id="table">
         {user ? (
           <TrackerTable
             deleteRows={deleteRows}
             rows={rows.filter((row) => {
-              // console.log("date:", date)
+              console.log("date:", date)
               // console.log("using dayjs:", dayjs(new Date(row.created_at)))
               // console.log(date === dayjs(new Date(row.created_at)))
               const dayjsdate = dayjs(new Date(row.created_at));

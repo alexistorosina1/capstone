@@ -46,11 +46,42 @@
   font-size: 30px;
 }
 
+
 .lg-container {
   position: relative;
+  text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+  border-radius: 25px;
   height: 50vh;
   padding-left: 20px;
   padding-right: 10px;
   padding-bottom: 40px;
   width: 300px;
+}
+.login {
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  padding-top: 80px;
+}
+
+.image {
+  position: absolute;
+  border-radius: 15px;
+  box-shadow: 0px 0px 188px 15px rgba(255,46,98,0.9);
+  -webkit-animation: glowing 1s ease-in-out infinite alternate;
+  -moz-animation: glowing 1s ease-in-out infinite alternate;
+  animation: glowing 1s ease-in-out infinite alternate;
+  right: 200px;
+  height: 50vh;
+  width: 300px;
+  height: auto;
+}
+
+@keyframes glowing {
+  from {
+    box-shadow: 0px 0px 188px 35px rgba(255, 46, 98, 0.933);
+  }
+  to {
+    box-shadow: 0px 0px 188px 40px rgba(255, 46, 98, 0.441);
+  }
 }

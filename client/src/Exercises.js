@@ -21,7 +21,7 @@ function Exercises() {
         height: "800px",
         width: "1000px",
         position: "absolute",
-
+        
       }}
     >
       {/* <img

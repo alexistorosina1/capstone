@@ -41,7 +41,7 @@ const quotes = [
     },
     {
         quote: "You miss one hundred percent of the shots you don't take.",
-        cite: "- Wayne Gretzky, 4-time Stanley Cup winner"
+        cite: "- Michael Scott"
     }
 ]
 function Home ({ user, onLogin }){
@@ -54,6 +54,9 @@ function Home ({ user, onLogin }){
 
   return (
     <div class="main-container">
+        <div class="image">
+            <img style={{borderRadius: "15px"}}src="https://www.nawpic.com/media/2020/gym-nawpic.webp"/>
+        </div>
       {/* {user ? 
         <h1 class="text-right text-sky-400">Welcome back {user.username}</h1>
        : 
@@ -69,12 +72,12 @@ function Home ({ user, onLogin }){
               {quotes[index] && quotes[index].cite}
             </p>
             <button class="btn btn-blue" onClick={generate}>
-              Generate
+              Click Me!
             </button>
             {/* <h1 class="text-right text-sky-400">Welcome back {user.username}</h1>  */}
           </span>
          : 
-        <div>
+        <div className="login">
           <Login onLogin={onLogin} />
         </div>
         }

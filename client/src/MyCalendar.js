@@ -15,6 +15,14 @@ function MyCalendar({setDate}){
     },[])
 
     return(
+        <div style={{
+            margin: "auto",
+            height:"350px",
+            width:"640px",
+            top:"50px",
+            left:"50px",
+            borderRadius: "30px"
+        }}>
         <LocalizationProvider dateAdapter={AdapterDayjs}>
             <StaticDatePicker
             orientation="landscape"
@@ -27,6 +35,7 @@ function MyCalendar({setDate}){
             renderInput={(params) => <TextField {...params}/>}
             />
         </LocalizationProvider>
+        </div>
     )
 }
 
